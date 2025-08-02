@@ -21,6 +21,7 @@ class ChatDetailPage extends StatefulWidget {
 
 class _ChatDetailPageState extends State<ChatDetailPage> {
   bool showEmoji = false;
+  const String baseUrl = 'https://dhkptsocial-8d3v.onrender.com';
   final String baseUrl = 'https://dhkptsocial-8d3v.onrender.com';
   final TextEditingController controller = TextEditingController();
   final ScrollController scrollController = ScrollController();
