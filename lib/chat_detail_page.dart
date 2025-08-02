@@ -21,7 +21,7 @@ class ChatDetailPage extends StatefulWidget {
 
 class _ChatDetailPageState extends State<ChatDetailPage> {
   bool showEmoji = false;
-  final String baseUrl = 'http://10.21.8.109:1324';
+  final String baseUrl = 'https://dhkptsocial-8d3v.onrender.com';
   final TextEditingController controller = TextEditingController();
   final ScrollController scrollController = ScrollController();
   IO.Socket? socket;

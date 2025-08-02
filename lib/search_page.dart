@@ -39,7 +39,7 @@ class _SearchPageState extends State<SearchPage> {
   String? customerId;
 
   final String baseUrl =
-      'http://10.21.8.109:1324'; 
+      'https://dhkptsocial-8d3v.onrender.com'; 
   List<UserModel> randomUsers = [];
   List<UserModel> mayKnowUsers = [];
   List<UserModel> searchResults = [];

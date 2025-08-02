@@ -28,7 +28,7 @@ class VideoCallPage extends StatefulWidget {
 }
 
 class _VideoCallPageState extends State<VideoCallPage> {
-  final String baseUrl = 'http://10.21.8.109:1324';
+  final String baseUrl = 'https://dhkptsocial-8d3v.onrender.com';
   late RtcEngine _engine;
   int? _remoteUid;
   bool _isReady = false; // ✅ Thêm biến này
@@ -117,7 +117,7 @@ class _VideoCallPageState extends State<VideoCallPage> {
   print('🧾 generateUid from: $userId');
   if (userId == '67e668e065abde6d8d9b7350') return 1; // máy gọi
   if (userId == '6785fc7b76300153dc080776') return 2; // máy nhận
-  return 999; // fallback tránh xung đột
+  return 999; 
 }
 
   @override
@@ -147,7 +147,7 @@ class _VideoCallPageState extends State<VideoCallPage> {
                 : AgoraVideoView(
                     controller: VideoViewController.remote(
                       rtcEngine: _engine,
-                      canvas: VideoCanvas(uid: _remoteUid), // SỬA ở đây
+                      canvas: VideoCanvas(uid: _remoteUid), 
                       connection: RtcConnection(channelId: widget.channelName),
                     ),
                   ),
@@ -162,7 +162,7 @@ class _VideoCallPageState extends State<VideoCallPage> {
                 controller: VideoViewController(
                   rtcEngine: _engine,
                   canvas:
-                      VideoCanvas(uid: generateUid(widget.userId)), // SỬA ở đây
+                      VideoCanvas(uid: generateUid(widget.userId)),
                 ),
               ),
             ),

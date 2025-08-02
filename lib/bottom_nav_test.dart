@@ -9,15 +9,16 @@ class NavigationTest extends StatelessWidget {
   }
 }
 
-class RightBottomVerticalNav extends StatefulWidget  {
+class RightBottomVerticalNav extends StatefulWidget {
   @override
   _RightBottomVerticalNavState createState() => _RightBottomVerticalNavState();
 }
 
-class _RightBottomVerticalNavState extends State<RightBottomVerticalNav> with TickerProviderStateMixin {
+class _RightBottomVerticalNavState extends State<RightBottomVerticalNav>
+    with TickerProviderStateMixin {
   int _selectedIndex = 0;
   bool _isExpanded = false;
-  
+
   final List<Widget> _views = [
     SearchPage(),
     ChatListPage(),
@@ -72,11 +73,14 @@ class _RightBottomVerticalNavState extends State<RightBottomVerticalNav> with Ti
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    boxShadow: const [BoxShadow(blurRadius: 8, color: Colors.black12)],
+                    boxShadow: const [
+                      BoxShadow(blurRadius: 8, color: Colors.black12)
+                    ],
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -88,18 +92,18 @@ class _RightBottomVerticalNavState extends State<RightBottomVerticalNav> with Ti
                             });
                           },
                           child: Container(
-                              padding: const EdgeInsets.all(12),
-                              decoration: BoxDecoration(
-                                color: Color(0xFF7893ff),
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Icon(
-                                _isExpanded ? Icons.close : Icons.menu,
-                                color: Colors.white,
-                              ),
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: Color(0xFF7893ff),
+                              borderRadius: BorderRadius.circular(12),
                             ),
+                            child: Icon(
+                              _isExpanded ? Icons.close : Icons.menu,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
-                         if (_isExpanded) _buildNavItem(Icons.chat, 1),
+                        if (_isExpanded) _buildNavItem(Icons.chat, 1),
                       ],
                     ),
                   ),

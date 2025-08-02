@@ -10,7 +10,7 @@ class SocketService {
 
   IO.Socket? socket;
   String? currentUserId;
-  final String baseUrl = 'http://10.21.8.109:1324';
+  final String baseUrl = 'https://dhkptsocial-8d3v.onrender.com';
 
   void init(String userId, BuildContext context) {
     if (socket != null && socket!.connected) return;

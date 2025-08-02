@@ -13,7 +13,7 @@ class ChatListPage extends StatefulWidget {
 }
 
 class _ChatListPageState extends State<ChatListPage> {
-  final String baseUrl = 'http://10.21.8.109:1324';
+  final String baseUrl = 'https://dhkptsocial-8d3v.onrender.com';
   String? currentUserId;
   List<dynamic> contacts = [];
   Map<String, dynamic> lastMessages = {};
